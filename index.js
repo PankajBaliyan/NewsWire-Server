@@ -1,7 +1,27 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const app = express()
-const port = 3001
 
-app.get('/', (req, res) => res.send('Hello World!'))
+//* dotenv configuration
+require('dotenv').config();
+const port = process.env.PORT
+const URI = process.env.URI;
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Connect to MongoDB
+mongoose.connect(URI)
+    .then(() => {
+        console.log('Connected to MongoDB')
+    })
+    .catch(() => {
+        console.log('Connection failed')
+    })
+
+// used to send data to React
+app.use(express.json())
+
+// Routes
+const newsRoutes = require('./routes/news')
+app.use(newsRoutes);
+
+// Start server
+app.listen(port, () => console.log(`App listening on port http://localhost:${port}`))
