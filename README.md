@@ -28,7 +28,7 @@ NewsWire is a web application that allows users to create, read, update, and del
 
 # Authors
 
-- [@PankajbBliyan](https://www.github.com/pankajbaliyan)
+- [@PankajBaliyan](https://www.github.com/pankajbaliyan)
 
 
 # Contributing
@@ -45,6 +45,7 @@ Please adhere to this project's `code of conduct`.
 
 <!-- https://profile-cards-view.vercel.app -->
 <br><br>
+Server : https://newswire-server.onrender.com
 <!-- https://pankajbaliyan.github.io/Profile-Cards-View/ -->
 
 
