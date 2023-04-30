@@ -4,7 +4,10 @@ const app = express()
 
 const cors = require('cors')
 app.use(cors({
+    // For Development 👇
     // origin: 'http://localhost:3000'
+
+    // For Production
     origin: 'https://newswire-client.onrender.com'
 }))
 
